@@ -16,12 +16,12 @@ class BuyerRestService {
     private final BuyerService buyerService;
 
     @PostMapping
-    public Buyer save(Buyer buyer) {
+    Buyer save(Buyer buyer) {
         return buyerService.save(buyer);
     }
 
     @GetMapping("/{id}")
-    public Buyer get(@PathVariable Integer id) {
+    Buyer get(@PathVariable Integer id) {
         return buyerService.get(id);
     }
 }
